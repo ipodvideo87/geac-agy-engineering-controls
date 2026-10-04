@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "geac-x1-r1-engineering-controls",
+  "description": "Experimental GEAC X1-R1 kernel with eight unconditionally loaded skills through a PreInvocation system-context hook."
+}

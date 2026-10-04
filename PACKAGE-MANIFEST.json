@@ -1,0 +1,406 @@
+{
+  "release_id": "GEAC-X1-R1-PLUGIN-PREVIEW-2026-10-03",
+  "status": "EXPERIMENTAL_RECONSTRUCTION_NOT_PROMOTED",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 43,
+      "sha256": "856d3fdd756775132bb6e1d2eb1661655915aee74acafceb3dddc731017e2b2d"
+    },
+    {
+      "path": "Install-GEAC-X1-R1.ps1",
+      "bytes": 5376,
+      "sha256": "0f4491b6b89481b011354cbb0dd5967ebcd4a72801cc08a046522541e7594218"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1068,
+      "sha256": "4d411f75b8ea3c19122e83481f81fbd0897d883fcee342171f8c042f1f616949"
+    },
+    {
+      "path": "PLUGIN-SHA256.txt",
+      "bytes": 1379,
+      "sha256": "8b9670d96efa402aaee4269459a16c51cadb0ce66e341bd89ffb052fd93efe01"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8665,
+      "sha256": "7c9d87444a445684a7ad96c3a3b449cd7962da5401fac9d773b030b2fa711f72"
+    },
+    {
+      "path": "SOURCE-BASIS.json",
+      "bytes": 1391,
+      "sha256": "cc1eaaa7a14df38428138356221bf9d3a50df462bc60637e491e87ea2e0e1520"
+    },
+    {
+      "path": "Verify-GEAC-X1-R1.ps1",
+      "bytes": 2213,
+      "sha256": "18a81e0a713e3ba3567ad0e7051135c572a1749ff6c4aaecf42c36bf9c253a25"
+    },
+    {
+      "path": "docs/RATIONALE.md",
+      "bytes": 3293,
+      "sha256": "8866077535366537c80694b4e5845b21c6edf899c9ba10d943f7f76a021e566a"
+    },
+    {
+      "path": "docs/SOURCE-RECOVERY.md",
+      "bytes": 6496,
+      "sha256": "304d80c2d72068f38a4f7f66f33046e8ef5392f50f2749e4cfa09ebc09ca5e78"
+    },
+    {
+      "path": "install-geac-x1-r1.sh",
+      "bytes": 1469,
+      "sha256": "6ac3c01b26a87c346972073d78de12e8c14349bdc566c2264a8cd8864cd847f5"
+    },
+    {
+      "path": "install/hooks.unix.json",
+      "bytes": 220,
+      "sha256": "0303cda6e625cb77ffecb4f468fa85d90e720624ce3f28ed20b9593d79989ed0"
+    },
+    {
+      "path": "install/hooks.windows.json",
+      "bytes": 292,
+      "sha256": "104ae0d525a37428c69f7ef378d0894272265bc2edf0ba3172bc2b112539f4e5"
+    },
+    {
+      "path": "plugin/plugin.json",
+      "bytes": 251,
+      "sha256": "e441859042c2f8b722eb9c21c400b3e52d0dffb6903551faaf5a31a11403ff8b"
+    },
+    {
+      "path": "plugin/rules/GEMINI.md",
+      "bytes": 10054,
+      "sha256": "ef450a7829440271b3b689744e125f47b9a160dc0cc1f9f6ff1490e7edf5f6b7"
+    },
+    {
+      "path": "plugin/scripts/geac-auto-state-output.json",
+      "bytes": 23062,
+      "sha256": "b750e779dc6c08101f83e42c68dc0a4eed8a175dd5e3f5f7372750a31a1472dd"
+    },
+    {
+      "path": "plugin/scripts/geac-preinvocation.ps1",
+      "bytes": 991,
+      "sha256": "f970387fdd1ef1bf7929d8ad0215296b17132312c6d4e84dfcc82944b87839ae"
+    },
+    {
+      "path": "plugin/scripts/geac-preinvocation.sh",
+      "bytes": 381,
+      "sha256": "73ddec410d9101ac694da5510e1c953fe501a3de605cd7e060d4423e03e2a715"
+    },
+    {
+      "path": "plugin/skills/action-authorization-and-necessity/SKILL.md",
+      "bytes": 2885,
+      "sha256": "98c68688a9bac80228693ca5462434ab7115acef0931ab62807511945368f581"
+    },
+    {
+      "path": "plugin/skills/artifact-identity-and-provenance/SKILL.md",
+      "bytes": 3161,
+      "sha256": "9d400924158e5f474bb4c6db7a9a29bfbc72bf91cb56dfc646275c14bff9d328"
+    },
+    {
+      "path": "plugin/skills/claim-inference-and-strengthening/SKILL.md",
+      "bytes": 2312,
+      "sha256": "f9e4a1b800e2436a8a7cd18a5ca00dd53fc1b4a789afa1a058b1bd4dad9b6e3a"
+    },
+    {
+      "path": "plugin/skills/claim-output-validation/SKILL.md",
+      "bytes": 2676,
+      "sha256": "0d0e23e7651a20f82a81b7cc46d3603dee30b50039ec63fec4830df72f3c8744"
+    },
+    {
+      "path": "plugin/skills/evidence-source-and-claims/SKILL.md",
+      "bytes": 2688,
+      "sha256": "efd8e54e9cab93a2d6c0a435b96010ca87014717ed51f25eb96b96e63e5293ea"
+    },
+    {
+      "path": "plugin/skills/historical-evidence-preservation/SKILL.md",
+      "bytes": 2452,
+      "sha256": "27066b7e999a8750dc85456e4cfa451aeef1e40a4945f352476ec623e875808a"
+    },
+    {
+      "path": "plugin/skills/readiness-and-completion-criteria/SKILL.md",
+      "bytes": 2547,
+      "sha256": "cd8c6b97186714160d8e5dcff390779a4b06c7c061aeaf1f0f630793ae935121"
+    },
+    {
+      "path": "plugin/skills/test-scan-results-and-verification/SKILL.md",
+      "bytes": 3032,
+      "sha256": "6b101e7611d8b42d7c561834a3ab7702510a245942b8c6f550fead774c7c5d4a"
+    },
+    {
+      "path": "reference/README.md",
+      "bytes": 558,
+      "sha256": "cae201d63555d692e7ebc7ade39f0a1e1f98c169ed690505d8b2d66b62706ef5"
+    },
+    {
+      "path": "reference/source/README.md",
+      "bytes": 1661,
+      "sha256": "08b455e82171fe77caa2440ea40c024f26309a8c5cfab9161a3ea255d7696bdd"
+    },
+    {
+      "path": "reference/source/archives/GEAC_E2_IMPORT_PROBE_01.zip",
+      "bytes": 48662,
+      "sha256": "78521739cdc944d39801541501e3857073999b16e7f506bb970ab0f6d913f582"
+    },
+    {
+      "path": "reference/source/archives/GEAC_E2_PREVIEW_01.zip",
+      "bytes": 40528,
+      "sha256": "47b16b93970c51e5d062cbc1af188a35270d6026ddaf0e97a1074a8f97121d98"
+    },
+    {
+      "path": "reference/source/archives/GEAC_E2_PREVIEW_02.zip",
+      "bytes": 42748,
+      "sha256": "d1a5423ca930948210c210dbe7bfe079e01c30505341b7d6c7ad6f5c788fe80a"
+    },
+    {
+      "path": "reference/source/archives/GEAC_V1_1_Candidate_D2.zip",
+      "bytes": 29383,
+      "sha256": "6995018a6b651e35f9c356232b441b36c953add61fcd23755b4340857d1173c8"
+    },
+    {
+      "path": "reference/source/archives/GEAC_X1_R1_IDENTITY_PATCH.zip",
+      "bytes": 7814,
+      "sha256": "5096e5acf5e44cf5b85806e9a0a50356b012720b57d3c91b32010b16a1c866ab"
+    },
+    {
+      "path": "reference/source/historical-notes/GEMINI_D2_SEMANTIC_HARDENING_E1.md",
+      "bytes": 17122,
+      "sha256": "5d551206fca7efe328a13617c5c04ea4ab8eb2d9863bbb5f4a7b7eceaa543ef8"
+    },
+    {
+      "path": "reference/source/r3-skill-discovery/Update-Gemini-Skill-Discovery-v2.ps1",
+      "bytes": 28413,
+      "sha256": "ea814532f32ce6ddec86277ccc300930890c2dc35f39d1d47a163563df20a88d"
+    },
+    {
+      "path": "reference/source/r3-skill-discovery/Update-Gemini-Skill-Discovery.ps1",
+      "bytes": 27879,
+      "sha256": "d0331cd9a3379958c4cb8219ea12b8c150dc5bbc963e2233bf6e2a24f6efa355"
+    },
+    {
+      "path": "reference/source/x1-original/Install-GEAC-X1.ps1",
+      "bytes": 6894,
+      "sha256": "d917857afd75f9f84bdad3c517ad915e46c306b0af62f235c890785ed5148210"
+    },
+    {
+      "path": "reference/source/x1-original/PACKAGE-SHA256.txt",
+      "bytes": 2671,
+      "sha256": "3ebfb81c08c600cb3e8216bb145dbf0ec37e4f33678b7f8d56ed1edc318919ab"
+    },
+    {
+      "path": "reference/source/x1-original/README.md",
+      "bytes": 5186,
+      "sha256": "a59cc128420b4938c57c462e027ce0b3e85ce5e2775cc4b7ae3cc6cd5cc72530"
+    },
+    {
+      "path": "reference/source/x1-original/Restore-GEAC-X1.ps1",
+      "bytes": 4500,
+      "sha256": "6f5f7e18f40f75cf4e392ff9c3628cb9b74cea97e62e43cef921ac13aaea2907"
+    },
+    {
+      "path": "reference/source/x1-original/Verify-GEAC-X1.ps1",
+      "bytes": 1596,
+      "sha256": "75b57149145847d350e846e8538f189f69c8fb979375f39876a31516a2bc50e3"
+    },
+    {
+      "path": "reference/source/x1-original/X1-PAYLOAD-MANIFEST.json",
+      "bytes": 2541,
+      "sha256": "3b7ff8f87c38213990e07f6aed13fbc4ac37014912eecba826b80259995124ee"
+    },
+    {
+      "path": "reference/source/x1-original/docs/2026-08-15-geac-x1-experimental-behavioral-baseline-design.md",
+      "bytes": 12646,
+      "sha256": "15f54ed8004659bf2e2929520f21327bf754f1010f37df7183f26fc4199047f0"
+    },
+    {
+      "path": "reference/source/x1-original/docs/GOOGLE-DOCUMENTATION-BASIS-2026-08-15.md",
+      "bytes": 2561,
+      "sha256": "c6aa691ce3d2fe6bfc57720f192ac155f5311b90f0d3e54c1a4dd6612cfa7d83"
+    },
+    {
+      "path": "reference/source/x1-original/docs/superpowers/plans/2026-08-15-geac-x1-experimental-baseline-implementation.md",
+      "bytes": 6865,
+      "sha256": "43562ab5b6a85df430fbdeaeae0467cacb4212dff22c67d284ae9b6577e7b51d"
+    },
+    {
+      "path": "reference/source/x1-original/experiments/FIRST-RUN-SANITY-001.md",
+      "bytes": 3261,
+      "sha256": "5299ffb41d9c480ca2dd1745718b6b2ba51773727adcda5ff39bd1c3b0aee38a"
+    },
+    {
+      "path": "reference/source/x1-original/experiments/MICRO-REGRESSIONS.md",
+      "bytes": 4235,
+      "sha256": "93085a0082f4dae77c11aca45c53df2bec1a73bc7b6152a53e8a4cb8c038f238"
+    },
+    {
+      "path": "reference/source/x1-original/experiments/SANITY-001-PROMPT-INTEGRITY-GUARD.txt",
+      "bytes": 315,
+      "sha256": "89d826850fbabc40059963148f420a7fa18d2ce2635571366ade99cfa22b146a"
+    },
+    {
+      "path": "reference/source/x1-original/experiments/X1-RUN-RECORD-TEMPLATE.md",
+      "bytes": 1223,
+      "sha256": "523d6b9138480116bd2493be16c3d7a07aa563867deef8a78bf7557ee05beaf0"
+    },
+    {
+      "path": "reference/source/x1-original/payload/GEMINI.md",
+      "bytes": 9407,
+      "sha256": "4561400a6215fc8ebc3f003185269b00ebb0b0eacba81c97529195051276087e"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-authority.md",
+      "bytes": 2707,
+      "sha256": "3d712609c54ad57aad4db06c9e24cd8630b369256860d169f30f302edff2c986"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-criteria.md",
+      "bytes": 2400,
+      "sha256": "886c2888dee332efd79c9b53693dd81dbc14b0b5230a0563b93dd89f07622b5e"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-evidence.md",
+      "bytes": 2528,
+      "sha256": "b3dc748d2c5d7bdd757cd05009aa45585d313b2fac90a74d975e8e98cf097908"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-history.md",
+      "bytes": 2294,
+      "sha256": "3c041b96f20a385ad60f3de5020a3ff20342ef3cd2148f0d9857e4fccffb113f"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-identity.md",
+      "bytes": 2532,
+      "sha256": "f32177a8012cba43ec466bf55cac1608bf1aafd37e433b0a899ce91d63fd67fa"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-reporting.md",
+      "bytes": 2550,
+      "sha256": "cb210920d7f909f2f157a1e0e3726234b66e0c725147bf336c173cb6736005ff"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-testing.md",
+      "bytes": 2890,
+      "sha256": "339806d69e0b93de7de4371b3891ec5f2b0dcd91e4cdd518a46a27a188f8f704"
+    },
+    {
+      "path": "reference/source/x1-original/payload/skills/geac-x1-engineering-transitions.md",
+      "bytes": 2122,
+      "sha256": "83d2b6a863414a8fba4efabad9196c3d9c9a58ff27f0f43249beb2b3f985978f"
+    },
+    {
+      "path": "reference/source/x1-original/tests/test_x1_package.py",
+      "bytes": 7860,
+      "sha256": "59c10a799a6023190d71f70f8f4d09527361655f2c9859d9cf13f7008c89625d"
+    },
+    {
+      "path": "reference/source/x1-original/tools/build_manifest.py",
+      "bytes": 1586,
+      "sha256": "dbbdf75559193c6bb2691e3a89e860616ce1f4b60c9cad04f2d43bfd296fd1f1"
+    },
+    {
+      "path": "reference/x1-r1/Apply-GEAC-X1-R1.py",
+      "bytes": 10280,
+      "sha256": "6beedaa5d690d65900462b75a34661985324a4df481471fb7e5bce884c453839"
+    },
+    {
+      "path": "reference/x1-r1/README-X1-R1.txt",
+      "bytes": 2739,
+      "sha256": "8825f578724ec3e03bcfe825390a72d4f2de9ef646c85d4d27ef20c5a85199bc"
+    },
+    {
+      "path": "reference/x1-r1/X1-R1-CHANGE.txt",
+      "bytes": 808,
+      "sha256": "16c3f7796f60699e1f015928e296584f130afb77d242bf3685573db9d26bad01"
+    },
+    {
+      "path": "reference/x1-r1/X1-R1-SHA256.txt",
+      "bytes": 220,
+      "sha256": "c04b679f73886cd9703b478408b4705ab835d5418d8d297e9ff89d05747fa1b4"
+    },
+    {
+      "path": "reference/x1-r1/test_apply_geac_x1_r1.py",
+      "bytes": 4443,
+      "sha256": "d3a6c9513eac81c3ed25bc82fb0159edbed01b3e07414b47721ed6ce220291ea"
+    },
+    {
+      "path": "reference/x1/SOURCE-X1-README.md",
+      "bytes": 5186,
+      "sha256": "a59cc128420b4938c57c462e027ce0b3e85ce5e2775cc4b7ae3cc6cd5cc72530"
+    },
+    {
+      "path": "reference/x1/X1-PACKAGE-SHA256.txt",
+      "bytes": 2671,
+      "sha256": "3ebfb81c08c600cb3e8216bb145dbf0ec37e4f33678b7f8d56ed1edc318919ab"
+    },
+    {
+      "path": "reference/x1/X1-PAYLOAD-MANIFEST.json",
+      "bytes": 2541,
+      "sha256": "3b7ff8f87c38213990e07f6aed13fbc4ac37014912eecba826b80259995124ee"
+    },
+    {
+      "path": "reference/x1/docs/2026-08-15-geac-x1-experimental-behavioral-baseline-design.md",
+      "bytes": 12646,
+      "sha256": "15f54ed8004659bf2e2929520f21327bf754f1010f37df7183f26fc4199047f0"
+    },
+    {
+      "path": "reference/x1/docs/GOOGLE-DOCUMENTATION-BASIS-2026-08-15.md",
+      "bytes": 2561,
+      "sha256": "c6aa691ce3d2fe6bfc57720f192ac155f5311b90f0d3e54c1a4dd6612cfa7d83"
+    },
+    {
+      "path": "reference/x1/docs/superpowers/plans/2026-08-15-geac-x1-experimental-baseline-implementation.md",
+      "bytes": 6865,
+      "sha256": "43562ab5b6a85df430fbdeaeae0467cacb4212dff22c67d284ae9b6577e7b51d"
+    },
+    {
+      "path": "reference/x1/experiments/FIRST-RUN-SANITY-001.md",
+      "bytes": 3261,
+      "sha256": "5299ffb41d9c480ca2dd1745718b6b2ba51773727adcda5ff39bd1c3b0aee38a"
+    },
+    {
+      "path": "reference/x1/experiments/MICRO-REGRESSIONS.md",
+      "bytes": 4235,
+      "sha256": "93085a0082f4dae77c11aca45c53df2bec1a73bc7b6152a53e8a4cb8c038f238"
+    },
+    {
+      "path": "reference/x1/experiments/SANITY-001-PROMPT-INTEGRITY-GUARD.txt",
+      "bytes": 315,
+      "sha256": "89d826850fbabc40059963148f420a7fa18d2ce2635571366ade99cfa22b146a"
+    },
+    {
+      "path": "reference/x1/experiments/X1-RUN-RECORD-TEMPLATE.md",
+      "bytes": 1223,
+      "sha256": "523d6b9138480116bd2493be16c3d7a07aa563867deef8a78bf7557ee05beaf0"
+    },
+    {
+      "path": "reference/x1/tests/test_x1_package.py",
+      "bytes": 7860,
+      "sha256": "59c10a799a6023190d71f70f8f4d09527361655f2c9859d9cf13f7008c89625d"
+    },
+    {
+      "path": "tools/apply_r3_skill_metadata.py",
+      "bytes": 6357,
+      "sha256": "d9376bdb04578c006a280c4fbd3e150584e896a44e005268f18ea66c4b21ea1e"
+    },
+    {
+      "path": "tools/build_auto_state_payload.py",
+      "bytes": 2011,
+      "sha256": "857c66982796262e54828ecd3b41d9131626e10b0d46088d57327163b7472a3a"
+    },
+    {
+      "path": "tools/build_package_manifests.py",
+      "bytes": 2267,
+      "sha256": "d95e2741eca24a13e9892c6e5b05195795c8d64d6a9eb50fe3d0c6abe43d0ffc"
+    },
+    {
+      "path": "verify-geac-x1-r1.sh",
+      "bytes": 1480,
+      "sha256": "c6bc6050d9dc8aef0846ee83634f703c2984db2ef6b99dd0267f4dc977e25655"
+    }
+  ]
+}

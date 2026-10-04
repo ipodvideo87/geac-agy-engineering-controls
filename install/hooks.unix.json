@@ -1,0 +1,12 @@
+{
+  "geac-x1-r1-always-on-skill-state": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "sh ./scripts/geac-preinvocation.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

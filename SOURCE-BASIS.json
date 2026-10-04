@@ -1,0 +1,16 @@
+{
+  "added_component": "Windows/Unix PreInvocation hook that reconstructs unconditional loading of all eight full skill files; historical auto-on hook source was not recovered",
+  "base_contract_id": "GEAC-2026-08-15-X1-EXPERIMENTAL-BASELINE",
+  "baseline_zip": "GEAC_X1_EXPERIMENTAL_BASELINE.zip",
+  "baseline_zip_sha256": "710e32cbb835fb51293e1d873406f215b646a3a2ea3eb3286ec12ce1c97e9d4c",
+  "baseline_zip_publication": "Not included in public tree because the archived README contains a local Windows user path; exact archive remains in the local recovery copy",
+  "r1_identity_sha256": "0dd2355ee3bd513bd6bb155b48f0ba9b7be747ca3d7f1834012ea3354aea2f50",
+  "r1_parent_identity_sha256": "f32177a8012cba43ec466bf55cac1608bf1aafd37e433b0a899ce91d63fd67fa",
+  "r1_patch_zip": "GEAC_X1_R1_IDENTITY_PATCH.zip",
+  "r1_patch_zip_sha256": "5096e5acf5e44cf5b85806e9a0a50356b012720b57d3c91b32010b16a1c866ab",
+  "release_id": "GEAC-X1-R1-PLUGIN-PREVIEW-2026-10-03",
+  "required_next_evidence": "Exact preserved SANITY-001 prompt/raw replay and exact R1 identity/provenance fixture/raw replay; do not reconstruct missing fixtures",
+  "revision_id": "GEAC-2026-08-15-X1-R1-IDENTITY-PROVENANCE-BOUNDARY",
+  "skill_metadata_basis": "Latest recovered R3 v2 labels and descriptions applied to the eight skills; descriptions safely quoted as YAML strings",
+  "status": "EXPERIMENTAL_PREVIEW_NOT_PROMOTED"
+}

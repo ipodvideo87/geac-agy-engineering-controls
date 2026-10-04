@@ -1,0 +1,5 @@
+GEAC X1 SANITY-001 PROMPT INTEGRITY GUARD
+
+The exact historical SANITY-001 prompt is intentionally NOT reconstructed here.
+Use only the exact preserved original prompt from its authoritative source.
+If exact recovery is unavailable, classify EXACT_REPLAY=NOT_ESTABLISHED and do not substitute a reconstructed test.

@@ -1,0 +1,12 @@
+{
+  "geac-x1-r1-always-on-skill-state": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\\scripts\\geac-preinvocation.ps1",
+        "timeout": 10
+      }
+    ]
+  }
+}

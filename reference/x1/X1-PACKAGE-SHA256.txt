@@ -1,0 +1,29 @@
+GEAC X1 EXPERIMENTAL BASELINE — PACKAGE FILE SHA-256
+=====================================================
+
+Scope: all distributed package files except this inventory itself.
+The ZIP artifact is hashed separately in GEAC_X1_EXPERIMENTAL_BASELINE.zip.sha256.
+
+d917857afd75f9f84bdad3c517ad915e46c306b0af62f235c890785ed5148210  Install-GEAC-X1.ps1
+84bcee0d3849582ecf7c48949cca6231de15f4748b071f5a227bf3e8778f4dbc  README.md
+6f5f7e18f40f75cf4e392ff9c3628cb9b74cea97e62e43cef921ac13aaea2907  Restore-GEAC-X1.ps1
+75b57149145847d350e846e8538f189f69c8fb979375f39876a31516a2bc50e3  Verify-GEAC-X1.ps1
+3b7ff8f87c38213990e07f6aed13fbc4ac37014912eecba826b80259995124ee  X1-PAYLOAD-MANIFEST.json
+15f54ed8004659bf2e2929520f21327bf754f1010f37df7183f26fc4199047f0  docs/2026-08-15-geac-x1-experimental-behavioral-baseline-design.md
+c6aa691ce3d2fe6bfc57720f192ac155f5311b90f0d3e54c1a4dd6612cfa7d83  docs/GOOGLE-DOCUMENTATION-BASIS-2026-08-15.md
+43562ab5b6a85df430fbdeaeae0467cacb4212dff22c67d284ae9b6577e7b51d  docs/superpowers/plans/2026-08-15-geac-x1-experimental-baseline-implementation.md
+5299ffb41d9c480ca2dd1745718b6b2ba51773727adcda5ff39bd1c3b0aee38a  experiments/FIRST-RUN-SANITY-001.md
+93085a0082f4dae77c11aca45c53df2bec1a73bc7b6152a53e8a4cb8c038f238  experiments/MICRO-REGRESSIONS.md
+89d826850fbabc40059963148f420a7fa18d2ce2635571366ade99cfa22b146a  experiments/SANITY-001-PROMPT-INTEGRITY-GUARD.txt
+523d6b9138480116bd2493be16c3d7a07aa563867deef8a78bf7557ee05beaf0  experiments/X1-RUN-RECORD-TEMPLATE.md
+4561400a6215fc8ebc3f003185269b00ebb0b0eacba81c97529195051276087e  payload/GEMINI.md
+3d712609c54ad57aad4db06c9e24cd8630b369256860d169f30f302edff2c986  payload/skills/geac-x1-engineering-authority.md
+886c2888dee332efd79c9b53693dd81dbc14b0b5230a0563b93dd89f07622b5e  payload/skills/geac-x1-engineering-criteria.md
+b3dc748d2c5d7bdd757cd05009aa45585d313b2fac90a74d975e8e98cf097908  payload/skills/geac-x1-engineering-evidence.md
+3c041b96f20a385ad60f3de5020a3ff20342ef3cd2148f0d9857e4fccffb113f  payload/skills/geac-x1-engineering-history.md
+f32177a8012cba43ec466bf55cac1608bf1aafd37e433b0a899ce91d63fd67fa  payload/skills/geac-x1-engineering-identity.md
+cb210920d7f909f2f157a1e0e3726234b66e0c725147bf336c173cb6736005ff  payload/skills/geac-x1-engineering-reporting.md
+339806d69e0b93de7de4371b3891ec5f2b0dcd91e4cdd518a46a27a188f8f704  payload/skills/geac-x1-engineering-testing.md
+83d2b6a863414a8fba4efabad9196c3d9c9a58ff27f0f43249beb2b3f985978f  payload/skills/geac-x1-engineering-transitions.md
+59c10a799a6023190d71f70f8f4d09527361655f2c9859d9cf13f7008c89625d  tests/test_x1_package.py
+dbbdf75559193c6bb2691e3a89e860616ce1f4b60c9cad04f2d43bfd296fd1f1  tools/build_manifest.py

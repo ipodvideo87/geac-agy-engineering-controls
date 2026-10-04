@@ -1,0 +1,21 @@
+X1 -> X1-R1 TARGETED CHANGE
+===========================
+
+Target:
+  .gemini/antigravity-cli/skills/geac-x1-engineering-identity.md
+
+Insertion immediately after:
+  `SAME_METADATA(A,B) -/-> SAME_ARTIFACT(A,B)`
+
+Inserted text:
+  `SAME_METADATA(A,B) -/-> ACQUISITION_PROVENANCE(B)`
+  `NEAR_TIMESTAMP(A,B) -/-> ACQUISITION_PROVENANCE(B)`
+
+  Combinations of name, size, path, timestamp, or other metadata do not
+  establish a copy, transfer, staging, derivation, lineage, generation, or
+  acquisition event. Without event-binding evidence, report only the metadata
+  relation actually established and keep the provenance relation
+  `NOT_ESTABLISHED`. Do not introduce an unsupplied provenance event merely as
+  a compatibility explanation for the metadata.
+
+No other X1-managed control surface is revised by X1-R1.
