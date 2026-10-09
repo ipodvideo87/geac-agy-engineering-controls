@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7108,
-      "sha256": "b39dc6e99414aaa11ee3f59b8134c03bdd02a4f6b30880a189bca569364cb43b"
+      "bytes": 7399,
+      "sha256": "02851f1c466be389293a9219813e8374f40b41231d7c605bd1f3093c85e4948d"
     },
     {
       "path": "Restore-GEAC-R3-V2.ps1",
@@ -34,8 +34,8 @@
     },
     {
       "path": "SOURCE-BASIS.json",
-      "bytes": 1481,
-      "sha256": "794f67faa9f71677b5b9826fbdc7c87451c7218aa87e65039f0f2bb94890195c"
+      "bytes": 1824,
+      "sha256": "c23078d956e3cdf3d0cc00ccf698a393ef68dab7fe8c921a66caf7f7a8e3f3f7"
     },
     {
       "path": "SOURCE-PAYLOAD-SHA256.txt",
@@ -54,13 +54,13 @@
     },
     {
       "path": "docs/RATIONALE.md",
-      "bytes": 3544,
-      "sha256": "09bbc02a4c7f49cc507bc6fd623a223212f546ec3c0bfc434493dcb0940eed23"
+      "bytes": 3750,
+      "sha256": "3fe73ed56839b60cd1178461ef059381111a1282232e13c7877c069db93617db"
     },
     {
       "path": "docs/SOURCE-RECOVERY.md",
-      "bytes": 13723,
-      "sha256": "67085519991aff21df8646f8d1670629d5c020260d3eea01020f9ae6fffe3638"
+      "bytes": 14892,
+      "sha256": "0dc0cb30b1df65c9bb296123597274164dce8c99ae3db62da89b9918d48ed9c2"
     },
     {
       "path": "payload/skills/required-gate-action-authorization-and-necessity/SKILL.md",
@@ -199,8 +199,8 @@
     },
     {
       "path": "reference/source/kernel-candidates/README.md",
-      "bytes": 1506,
-      "sha256": "3e75629232488014528727e0fa874f45f960845e616a455b992b524c20b529f9"
+      "bytes": 2350,
+      "sha256": "6dfb83c0b43ed97fb09cbafd278c1c7f396fc2a128221224856f0c8e0f731824"
     },
     {
       "path": "reference/source/legacy-plugin-preview/GEMINI.md",

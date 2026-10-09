@@ -8,7 +8,7 @@ License: MIT
 
 GEAC is an engineering-control setup for Google Antigravity CLI (agy). It aims to keep evidence, scope, identity, verification, authority, and completion claims bounded during software-engineering work. It was created because a general-purpose agent can overextend its helpfulness by doing extra research or work, or by strengthening claims beyond the evidence. The PreInvocation hook forces eight focused skills into each model invocation.
 
-This is a standalone global CLI installation. It installs skills and hooks only; it does not install a plugin or a global `GEMINI.md` kernel. The X1 `GEMINI.md` is explicitly marked as an experimental baseline, so both recovered copies are preserved under `reference/source/x1-original/` and `reference/source/legacy-plugin-preview/` for provenance and are not installed.
+This is a standalone global CLI installation. It installs skills and hooks only; it does not install a plugin or a global `GEMINI.md` kernel. The conversation also records a separate global `GEMINI.md` present during the historical eight-skill setup (9,544 bytes; SHA-256 `96231f08f168d877912e2503b4059026dda34e2fb00512c20c096d34cfa50cdf`). Its exact contents were not recovered, and it differs from the 9,407-byte X1 kernel in the baseline archive. The available X1 kernel is explicitly marked as an experimental baseline, so the installer does not substitute it for the unrecovered active file. The preserved X1 and V1 kernel files are reference material only.
 
 ## What is included
 
