@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate package and plugin SHA-256 manifests using only the standard library."""
+"""Regenerate package and source-payload SHA-256 manifests using only the standard library."""
 
 from __future__ import annotations
 
@@ -34,18 +34,18 @@ def files_under(root: Path) -> list[Path]:
 def main() -> None:
     all_files = [p for p in files_under(ROOT) if p not in ROOT_EXCLUDED]
     manifest = {
-        "release_id": "GEAC-X1-R1-PLUGIN-PREVIEW-2026-10-03",
+        "release_id": "GEAC-AGY-CLI-R3-V2-FG-V1-STANDALONE-2026-10-09",
         "status": "EXPERIMENTAL_RECONSTRUCTION_NOT_PROMOTED",
         "files": [
             {"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size, "sha256": sha256(p)}
             for p in all_files
         ],
     }
-    (ROOT / "PLUGIN-SHA256.txt").write_text(
-        "".join(f"{sha256(p)}  {p.relative_to(ROOT / 'plugin').as_posix()}\n" for p in files_under(ROOT / "plugin")),
+    (ROOT / "SOURCE-PAYLOAD-SHA256.txt").write_text(
+        "".join(f"{sha256(p)}  {p.relative_to(ROOT / 'payload').as_posix()}\n" for p in files_under(ROOT / "payload")),
         encoding="utf-8",
     )
-    # PLUGIN-SHA256.txt is part of the package and must be reflected in its manifest.
+    # SOURCE-PAYLOAD-SHA256.txt is part of the package and must be reflected in its manifest.
     all_files = [p for p in files_under(ROOT) if p not in ROOT_EXCLUDED]
     manifest["files"] = [
         {"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size, "sha256": sha256(p)}

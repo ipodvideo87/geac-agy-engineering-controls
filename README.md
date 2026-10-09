@@ -1,94 +1,82 @@
-# GEAC X1-R1 Plugin Preview
+# GEAC for Antigravity CLI
 
-**Release:** `GEAC-X1-R1-PLUGIN-PREVIEW-2026-10-03`  
-**Status:** Experimental reconstruction; not promoted or behaviorally validated.
-**License:** [MIT](LICENSE).
+Release: GEAC AGY CLI standalone with R3 v2 skill labels and the recovered FG-v1 forced-gate hook
 
-This package preserves the X1 baseline and the X1-R1 identity/provenance revision, then adapts them to an Antigravity plugin. It also reconstructs the missing always-on skill behavior with a `PreInvocation` hook that injects the complete text of all eight skills before every model call. The historical hook source was not recovered; this hook is a new, explicitly labeled reconstruction.
+Status: Experimental reconstruction; not promoted or behaviorally validated
 
-## Included components
+License: MIT
 
-- `plugin/rules/GEMINI.md`: the always-on X1 task/state/operation control kernel.
-- `plugin/skills/`: all eight focused GEAC skills with the final names and discovery wording from the later R3 v2 script: action authorization, readiness criteria, evidence, history, artifact identity, output claims, test/scan verification, and inference strengthening. Descriptions are quoted as YAML strings so the colon-bearing R3 wording parses correctly.
-- X1-R1 identity/provenance skill content retained under the R3 v2 skill name `artifact-identity-and-provenance`. The archived R1 output hash is `0dd2355ee3bd513bd6bb155b48f0ba9b7be747ca3d7f1834012ea3354aea2f50`; R3's name and description updates change the current file bytes.
-- `plugin/plugin.json`: the native Antigravity plugin manifest.
-- `install/hooks.windows.json` and `install/hooks.unix.json`: platform-specific hook registrations. The matching installer stages one as `hooks.json` before calling AGY.
-- `plugin/scripts/`: Windows and Unix hook emitters plus the generated pre-invocation payload. The payload unconditionally loads all eight skill instructions into system context each time the model is called.
-- `tools/build_auto_state_payload.py`: regenerates the all-eight-skill payload from the canonical installed skill files.
-- `tools/build_package_manifests.py`: regenerates package and plugin SHA-256 manifests after source changes.
-- Install, verify, and uninstall commands using the AGY plugin manager.
-- `reference/source/`: recovered X1 source tree, selected E2/R1 candidate archives, both R3 discovery scripts, and historical design notes. Two original ZIPs whose README examples contained a local Windows user path remain in the private recovery copy; their provenance is recorded, but those ZIPs are omitted here.
-- `docs/`: the source-recovery audit and the rationale distilled from the August continuity document.
+GEAC is an engineering-control setup for Google Antigravity CLI (agy). It aims to keep evidence, scope, identity, verification, authority, and completion claims bounded during software-engineering work. It was created because a general-purpose agent can overextend its helpfulness by doing extra research or work, or by strengthening claims beyond the evidence. The PreInvocation hook forces eight focused skills into each model invocation.
 
-No MCP server or custom agent is included: neither is part of the frozen X1-R1 payload. The package manifest and native plugin manifest are the additional packaging pieces.
+This is a standalone global CLI installation. It installs skills and hooks only; it does not install a plugin or a global `GEMINI.md` kernel. The X1 `GEMINI.md` is explicitly marked as an experimental baseline, so both recovered copies are preserved under `reference/source/x1-original/` and `reference/source/legacy-plugin-preview/` for provenance and are not installed.
 
-## Always-on skill state
+## What is included
 
-The installed R3 v2 skill labels and discovery descriptions are:
+- Eight focused skills with the R3 v2 descriptions and the shared required-gate- prefix.
+- The later X1-R1 identity and provenance content under the R3 v2 skill name.
+- The transcript-recovered FG-v1 PowerShell PreInvocation hook. It selects every skill whose canonical name starts with required-gate- and injects its full SKILL.md text on every model invocation.
+- The original X1-R2 claim-admission hook, recovered word-for-word from the conversation export and verified against its recorded 1,317-byte size and SHA-256. The exact later hook configuration shows it registered for `PreInvocation` only.
+- Windows PowerShell install, verify, and restore scripts.
+- Source-recovery notes, rationale, Order-of-Engineering and agent/subagent research notes, manifests, and preserved kernel candidates.
 
-| Skill name | Discovery description |
-|---|---|
-| `action-authorization-and-necessity` | STOP AND CHECK AUTHORIZATION OR NECESSITY: Use this skill whenever considering tools, searches, commands, mutations, research, additional evidence, or operational next steps, or whenever reasoning or output says an action is required, necessary, optional, blocking, authorized, permitted, recommended, executable, or should be performed. |
-| `readiness-and-completion-criteria` | STOP AND CHECK THE CRITERION: Use this skill whenever a status or conclusion says or implies ready, safe, pass, fail, correct, complete, acceptable, compliant, validated, releasable, or satisfied, especially when it depends on a policy, threshold, definition, requirement, or acceptance rule. |
-| `evidence-source-and-claims` | STOP AND CHECK THE SOURCE: Use this skill whenever factual information enters engineering reasoning, a material claim depends on supplied, observed, reported, asserted, verified, absent, unknown, missing, or conflicting information, or a closed evidence boundary matters. |
-| `historical-evidence-preservation` | STOP AND CHECK HISTORY: Use this skill whenever evidence or engineering state changes over time, or later success, failure, contradiction, remediation, replacement, revision, reconstruction, or new evidence could be interpreted as changing, erasing, or rewriting an earlier record or state. |
-| `artifact-identity-and-provenance` | STOP AND CHECK IDENTITY AND PROVENANCE: Use this skill whenever a claim depends on sameness, byte equality, artifact identity, generation, lineage, derivation, provenance, hashes, paths, metadata, IDs, timestamps, namespaces, or transfer history. |
-| `claim-output-validation` | STOP AND CHECK THE OUTPUT CLAIM: Use this skill whenever writing, emitting, or reformulating a material case-specific engineering conclusion, explanation, heading, table entry, summary, recommendation, verdict, status statement, completion claim, self-review, or other output claim. |
-| `test-scan-results-and-verification` | STOP AND CHECK THE TEST OR SCAN CLAIM: Use this skill whenever tests, scans, validation results, pass/fail outcomes, test execution, assertions, coverage, test scope, test runners, verification, safety, readiness, correctness, or proposed test or scan evidence are involved. |
-| `claim-inference-and-strengthening` | STOP AND CHECK THE INFERENCE: Use this skill whenever evidence or prior claims are combined, paraphrased, explained, generalized, strengthened, or used to infer a new proposition, especially mechanism, causality, scope, certainty, probability, provenance, identity, criterion, actor, environment, implementation, or authority. |
+The eight skill names are:
 
-Antigravity Skills are normally made available to the model by name and description, and the agent decides whether to read a skill based on relevance. This package overrides that selection step: an enabled `PreInvocation` hook injects all eight full `SKILL.md` files before every model invocation. The installed labels and descriptions use the final R3 v2 wording. The agent is instructed to consider every skill and mark an irrelevant domain `NOT_APPLICABLE`; it must not omit the skill because it judged it irrelevant before reading it.
+1. required-gate-action-authorization-and-necessity
+2. required-gate-readiness-and-completion-criteria
+3. required-gate-evidence-source-and-claims
+4. required-gate-historical-evidence-preservation
+5. required-gate-artifact-identity-and-provenance
+6. required-gate-claim-output-validation
+7. required-gate-test-scan-results-and-verification
+8. required-gate-claim-inference-and-strengthening
 
-This guarantees that the skill text is present in the invocation context when the hook runs. It does not guarantee model compliance, and it adds the eight skill texts to each model call. This mechanism is a reconstruction of the missing historical always-on script, based on Antigravity's documented `PreInvocation` ephemeral system-message interface.
+## How the forced state works
 
-## Install
+Antigravity normally makes skills available by name and description, then uses relevance to decide whether to read the full skill. The enabled FG-v1 PreInvocation hook bypasses that relevance decision for required-gate skills: it mechanically reads and injects every matching skill body before each model call. Other skills remain under normal Antigravity selection.
 
-Requires Antigravity CLI (`agy`) 1.2.7 or later.
+This guarantees that the skill text is included in the hook output when it runs. It does not guarantee that the model follows the instructions. Injecting all eight skill bodies on every model call adds context and may increase response time. This package has not established a behavioral or timing improvement.
 
-Windows PowerShell:
+The claim-admission hook also injects a transient reminder before each invocation. It does not inspect the generated answer or mechanically accept/reject claims. The transcript's exact hook configuration showed only `PreInvocation`; an earlier five-event description was corrected by the later configuration evidence.
 
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install-GEAC-X1-R1.ps1
-```
+The CLI skill paths and hook registry follow Antigravity's documented global locations. See the official documentation for [Agent skills](https://antigravity.google/docs/skills) and [Lifecycle hooks](https://antigravity.google/docs/hooks).
 
-Linux or macOS:
+## Install on Windows
 
-```sh
-sh ./install-geac-x1-r1.sh
-```
+Prerequisites: Antigravity CLI and Windows PowerShell. If an older GEAC plugin is enabled, disable or uninstall it first to avoid loading duplicate instructions. The installer refuses to proceed while that plugin is enabled.
 
-The installer verifies the release checksums, stages the platform-specific `hooks.json`, asks AGY to validate the plugin, and installs it into the CLI plugin directory. It refuses to overwrite a plugin already installed under the same name.
+From the extracted repository directory, run:
 
-## Verify and remove
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install-GEAC-R3-V2.ps1
 
-Run the platform verification script after installation:
+The installer backs up files it will replace under the user's .gemini/geac-backups directory, installs eight skills and two PreInvocation hooks, then runs the file and hook-payload verifier. It leaves the user's global `GEMINI.md` untouched and stops if it finds the known X1 experimental kernel there. Save the printed backup path.
 
-```powershell
-.\Verify-GEAC-X1-R1.ps1
-```
+## Verify and restore
 
-```sh
-sh ./verify-geac-x1-r1.sh
-```
+Verify the installed bytes, hook registration, and direct hook output without starting an Agy model task:
 
-AGY also provides `/skills` and `/hooks` in an interactive CLI session for checking discovery and hook registration. These checks establish visibility and registration only; they do not prove behavioral compliance.
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Verify-GEAC-R3-V2.ps1
 
-To remove the package:
+Restore the pre-install files using the backup path printed by the installer:
 
-```sh
-agy plugin uninstall geac-x1-r1-engineering-controls
-```
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Restore-GEAC-R3-V2.ps1 -BackupPath "C:\Users\<you>\.gemini\geac-backups\GEAC-R3-V2-FGv1\<timestamp>"
 
-## Behavioral evidence still required
+These checks establish file integrity, hook registration, and payload generation. They do not establish model compliance, software-engineering quality, or faster replies.
 
-The source X1 package explicitly says it is an experimental behavioral baseline, not a promotion candidate. Its first-run protocol requires the exact historical SANITY-001 prompt, but that prompt is not embedded in the source package. The R1 patch note also names a targeted identity/provenance acceptance result without including the exact historical fixture and raw replay. These missing records were not reconstructed. The all-eight-skill hook is a new implementation and still needs a fresh-session behavior comparison; installation and byte-hash checks establish package integrity only.
+## Recovery status and evidence
 
-Use the archived micro-regression prompts and `X1-RUN-RECORD-TEMPLATE.md` under `reference/x1/experiments/` after the exact integration prompt is recovered. Keep any future behavior change under a new package revision rather than editing installed files in place.
+R3 v2 is the latest recovered skill wording and label update. X1-R1 supplies later identity/provenance content, and FG-v1 is the recovered forced-skill hook. The installable setup combines the eight R3 v2-labeled skills, the X1-R1 identity content, FG-v1, and the transcript-recovered R2 claim-admission reminder. The X1 global `GEMINI.md` is excluded from installation because it identifies itself as an experimental baseline and explicitly not a promotion candidate; V1 and X1 kernel files are preserved as reference candidates.
+
+The October 9 paired Agy CLI run included the skills and compared FG-v1 disabled versus enabled. It did not include the separate historical R2 claim-admission hook; that source has since been recovered from the full conversation export and verified against its recorded size and SHA-256. Both runs failed to implement the scoped code task. Treat the timings as observations of that partial configuration, not proof of the former setup's engineering effect.
+
+The full conversation export contains the original R2 script. Its recovered bytes match the transcript-recorded size and SHA-256 exactly. The exact historical SANITY-001 prompt and R1 identity acceptance fixture are still missing. Treat this package as an experimental recovery, not as proof of effectiveness.
 
 ## Source and format references
 
-- [Antigravity Plugins](https://antigravity.google/docs/plugins)
-- [Antigravity Lifecycle Hooks](https://antigravity.google/docs/hooks)
-- [Antigravity Agent Skills](https://antigravity.google/docs/skills)
-
-`SOURCE-BASIS.json`, `PLUGIN-SHA256.txt`, `PACKAGE-SHA256.txt`, and `PACKAGE-MANIFEST.json` record source provenance and expected bytes. See [`docs/SOURCE-RECOVERY.md`](docs/SOURCE-RECOVERY.md) for the full search boundary and known gaps.
+- docs/SOURCE-RECOVERY.md: recovered lineage, completeness audit, and known gaps.
+- docs/RATIONALE.md: the motivation and engineering-control goals.
+- reference/source/historical-hooks/: transcript-recovered FG-v1 and R2 hook sources and provenance notes.
+- reference/source/kernel-candidates/: frozen V1 kernel reference; X1 is preserved under reference/source/x1-original/ and explicitly not promoted. No kernel is installed by this package.
+- docs/ARCHITECTURE-IDEAS.md: Order-of-Engineering, bootstrap, plugin, and agent/subagent ideas from the research conversation; these remain design research.
+- reference/source/r3-skill-discovery/: the two original R3 discovery scripts.
+- PACKAGE-MANIFEST.json and PACKAGE-SHA256.txt: package file inventory and hashes.
+- SOURCE-PAYLOAD-SHA256.txt: hashes for the eight skill files installed by the setup.

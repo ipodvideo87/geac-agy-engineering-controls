@@ -7,7 +7,7 @@ This directory holds recovered historical sources for traceability. Files under 
 - `r3-skill-discovery/` holds the two original discovery-description PowerShell scripts. They rename and describe skills but do not force them to load.
 - `historical-notes/` holds the downloaded D2 semantic-hardening note.
 
-Do not execute archived installers or R3 scripts as a substitute for the current package installer. The R3 descriptions need YAML correction, and the original X1 install layout predates this plugin package.
+Do not execute archived installers or R3 scripts as a substitute for the current standalone package installer. The R3 descriptions need YAML correction, and the original X1 install layout predates the current global CLI setup.
 
-The installed skill names and descriptions use the later R3 v2 wording. The package quotes those descriptions as YAML strings to preserve the exact wording while keeping frontmatter parseable. Forced all-eight loading is provided separately by the reconstructed PreInvocation hook; no historical hook script was recovered. The X1 extracted README's example backup path was normalized to `%USERPROFILE%` in this public copy; the local recovery copy preserves the original text.
+The installed skill descriptions use the later R3 v2 wording, and their canonical names carry the `required-gate-` prefix expected by the recovered FG-v1 hook. The package quotes descriptions as YAML strings to keep frontmatter parseable. The historical plugin preview is archived under `legacy-plugin-preview/`; the current installer uses the standalone global PreInvocation hook recovered from a conversation transcript. The X1 extracted README's example backup path was normalized to `%USERPROFILE%` in this public copy; the local recovery copy preserves the original text.
 

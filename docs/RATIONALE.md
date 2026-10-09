@@ -20,9 +20,9 @@ These mistakes can make an agent appear helpful while making its engineering out
 
 ## What the package changes
 
-GEAC X1 organizes engineering work as `TASK -> STATE -> OPERATION`. A small global kernel holds the shared invariants and eight focused skills own evidence, transitions, testing, identity, criteria, authority, history, and reporting. X1-R1 adds a narrow identity/provenance boundary: matching metadata does not establish a copy, transfer, derivation, lineage, or acquisition event.
+The historical X1 design organized engineering work as `TASK -> STATE -> OPERATION` and split checks across eight focused skills for evidence, transitions, testing, identity, criteria, authority, history, and reporting. X1-R1 added identity/provenance content: matching metadata does not establish a copy, transfer, derivation, lineage, or acquisition event. The X1 `GEMINI.md` itself is an experimental baseline and is not part of this installable setup.
 
-The recovered X1 design used an always-on kernel with selectively activated skills. The Library continuity record says that skill discovery did not reliably make all required skills active, so a later forced-gate/PreInvocation route was explored. Its source code was not recovered. This installer reconstructs the intended always-on behavior by injecting the full text of all eight skills before each model call. The agent then marks unused domains `NOT_APPLICABLE` rather than deciding whether to load their instructions.
+The Library continuity record says skill discovery did not reliably make all required skills active, so the later setup used a forced-gate/PreInvocation route. The shared conversation documents the standalone `geac-required-gate` hook and treats the larger bootstrap/plugin architecture as still under research. This installer injects the full text of all eight required-gate skills before each model call. A separate transcript-recovered R2 hook injects a claim-admission reminder before each invocation; it does not inspect model output or mechanically reject unsupported claims. The X1 kernel is archived and not installed; no replacement global `GEMINI.md` is selected by the recovered evidence.
 
 ## What users should get from it
 

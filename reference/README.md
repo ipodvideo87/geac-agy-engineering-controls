@@ -1,5 +1,5 @@
 # Reference material
 
-These files preserve the X1 and X1-R1 source design, payload manifest, experiment/run-record protocols, and R1 patch archive contents. They are included for provenance and future review.
+These files preserve the X1 and X1-R1 source designs, payload manifests, experiment protocols, and plugin-preview artifacts for provenance and review. They are not the active installer payload.
 
-Use the package-level `Install-GEAC-X1-R1.ps1` or `install-geac-x1-r1.sh` scripts to install the plugin. The archived `Apply-GEAC-X1-R1.py` and source X1 installer materials target the older standalone global-file layout; they are references, not the installer for this plugin package. The archived test files were not run for this packaging task.
+Use the repository-root `Install-GEAC-R3-V2.ps1` to install the current standalone skills-and-hooks setup. Files under `source/` are historical references and should not be run as the current installer. The active package does not install a plugin or a global `GEMINI.md` kernel.

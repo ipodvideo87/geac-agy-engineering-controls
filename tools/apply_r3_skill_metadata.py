@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply the latest R3 skill labels/descriptions to the X1-R1 plugin safely."""
+"""Apply the latest R3 skill labels/descriptions to the standalone payload safely."""
 
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / "plugin"
-SKILLS_ROOT = PLUGIN / "skills"
+PAYLOAD = ROOT / "payload"
+SKILLS_ROOT = PAYLOAD / "skills"
 
 
 @dataclass(frozen=True)
@@ -24,42 +24,42 @@ class Skill:
 SKILLS = (
     Skill(
         "geac-x1-engineering-evidence",
-        "evidence-source-and-claims",
+        "required-gate-evidence-source-and-claims",
         "STOP AND CHECK THE SOURCE: Use this skill whenever factual information enters engineering reasoning, a material claim depends on supplied, observed, reported, asserted, verified, absent, unknown, missing, or conflicting information, or a closed evidence boundary matters.",
     ),
     Skill(
         "geac-x1-engineering-transitions",
-        "claim-inference-and-strengthening",
+        "required-gate-claim-inference-and-strengthening",
         "STOP AND CHECK THE INFERENCE: Use this skill whenever evidence or prior claims are combined, paraphrased, explained, generalized, strengthened, or used to infer a new proposition, especially mechanism, causality, scope, certainty, probability, provenance, identity, criterion, actor, environment, implementation, or authority.",
     ),
     Skill(
         "geac-x1-engineering-testing",
-        "test-scan-results-and-verification",
+        "required-gate-test-scan-results-and-verification",
         "STOP AND CHECK THE TEST OR SCAN CLAIM: Use this skill whenever tests, scans, validation results, pass/fail outcomes, test execution, assertions, coverage, test scope, test runners, verification, safety, readiness, correctness, or proposed test or scan evidence are involved.",
     ),
     Skill(
         "geac-x1-engineering-identity",
-        "artifact-identity-and-provenance",
+        "required-gate-artifact-identity-and-provenance",
         "STOP AND CHECK IDENTITY AND PROVENANCE: Use this skill whenever a claim depends on sameness, byte equality, artifact identity, generation, lineage, derivation, provenance, hashes, paths, metadata, IDs, timestamps, namespaces, or transfer history.",
     ),
     Skill(
         "geac-x1-engineering-criteria",
-        "readiness-and-completion-criteria",
+        "required-gate-readiness-and-completion-criteria",
         "STOP AND CHECK THE CRITERION: Use this skill whenever a status or conclusion says or implies ready, safe, pass, fail, correct, complete, acceptable, compliant, validated, releasable, or satisfied, especially when it depends on a policy, threshold, definition, requirement, or acceptance rule.",
     ),
     Skill(
         "geac-x1-engineering-authority",
-        "action-authorization-and-necessity",
+        "required-gate-action-authorization-and-necessity",
         "STOP AND CHECK AUTHORIZATION OR NECESSITY: Use this skill whenever considering tools, searches, commands, mutations, research, additional evidence, or operational next steps, or whenever reasoning or output says an action is required, necessary, optional, blocking, authorized, permitted, recommended, executable, or should be performed.",
     ),
     Skill(
         "geac-x1-engineering-history",
-        "historical-evidence-preservation",
+        "required-gate-historical-evidence-preservation",
         "STOP AND CHECK HISTORY: Use this skill whenever evidence or engineering state changes over time, or later success, failure, contradiction, remediation, replacement, revision, reconstruction, or new evidence could be interpreted as changing, erasing, or rewriting an earlier record or state.",
     ),
     Skill(
         "geac-x1-engineering-reporting",
-        "claim-output-validation",
+        "required-gate-claim-output-validation",
         "STOP AND CHECK THE OUTPUT CLAIM: Use this skill whenever writing, emitting, or reformulating a material case-specific engineering conclusion, explanation, heading, table entry, summary, recommendation, verdict, status statement, completion claim, self-review, or other output claim.",
     ),
 )
@@ -109,9 +109,10 @@ def main() -> None:
         if old_dir.exists():
             old_dir.rename(new_dir)
 
-    # The original R3 scripts also changed cross-skill identifiers in the kernel and skills.
-    for path in (p for p in PLUGIN.rglob("*") if p.is_file() and p.suffix.lower() in {".md", ".json"}):
-        checked_child(PLUGIN, path)
+    # The original R3 scripts changed identifiers in the kernel and skills.
+    # This package applies the mappings to skills only; the X1 kernel is archived.
+    for path in (p for p in SKILLS_ROOT.rglob("*.md") if p.is_file()):
+        checked_child(SKILLS_ROOT, path)
         text = path.read_text(encoding="utf-8-sig")
         original = text
         for skill in SKILLS:
@@ -119,7 +120,7 @@ def main() -> None:
         if text != original:
             path.write_text(text, encoding="utf-8")
 
-    print(f"Applied R3 v2 names and descriptions to {len(SKILLS)} skills with YAML-safe quoted descriptions.")
+    print(f"Applied R3 v2 descriptions and required-gate-prefixed names to {len(SKILLS)} skills.")
 
 
 if __name__ == "__main__":
