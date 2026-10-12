@@ -75,6 +75,8 @@ The October 9 paired Agy CLI run included the skills and compared FG-v1 disabled
 
 The October 12 read-only review ran with all recovered controls, including the R4 kernel. AGY CLI 1.3.2 produced no final response after about 10 minutes 17 seconds; the partial trace showed file reads but no commands, tests, or writes. The model was not pinned. See [the trial record](docs/TRIAL-2026-10-12.md); this is a latency observation, not a behavioral result.
 
+The source conversation also records an earlier identical-request comparison: native loading of all eight skills versus FG-v1 injection. It showed mixed behavior changes and important configuration confounders, so it is not evidence that FG-v1 alone caused an overall quality improvement. The same conversation later moved toward researching a plugin as a future composition boundary, while leaving its architecture and runtime guarantees unresolved. See [the architecture research notes](docs/ARCHITECTURE-IDEAS.md).
+
 The full conversation export contains the original R2 script. Its recovered bytes match the transcript-recorded size and SHA-256 exactly. The exact historical SANITY-001 prompt and R1 identity acceptance fixture are still missing. Treat this package as an experimental recovery, not as proof of effectiveness.
 
 ## Source and format references

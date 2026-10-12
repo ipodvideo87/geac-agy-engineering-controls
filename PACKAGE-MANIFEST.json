@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8696,
-      "sha256": "dcd3c622861d94ea40e0bf49338126a60f30d063c104c9b51c57c67fcc10b413"
+      "bytes": 9215,
+      "sha256": "0d7a0259311fa023e6255d506c8c0372996a549589634ef9863598f18e1dcd4f"
     },
     {
       "path": "Restore-GEAC-R3-V2.ps1",
@@ -49,8 +49,8 @@
     },
     {
       "path": "docs/ARCHITECTURE-IDEAS.md",
-      "bytes": 5494,
-      "sha256": "b3fc4474362c0533d92fb48575364a1b6937d93bda774a43a02d13e5f2872716"
+      "bytes": 14017,
+      "sha256": "7410f6c0bc1a8ae8307736cde6aedaad913770d92cff799f14417ab2808b8c7f"
     },
     {
       "path": "docs/RATIONALE.md",
@@ -59,8 +59,8 @@
     },
     {
       "path": "docs/SOURCE-RECOVERY.md",
-      "bytes": 16774,
-      "sha256": "157eaac33c1f33efb9437bbaf16a5e1add6212f98a69c2cdbead8a4d155d198d"
+      "bytes": 17038,
+      "sha256": "bc1aa3d05e85ad340b61fd0dca4a65f22ddc022e128249c30c45a986aa4ef400"
     },
     {
       "path": "docs/TRIAL-2026-10-12.md",
