@@ -1,0 +1,25 @@
+{
+  "geac-x1-r2-claim-admission": {
+    "SessionStart": null,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"<redacted-profile>\\.gemini\\config\\hooks\\geac-x1-r2-claim-admission.ps1\""
+      }
+    ],
+    "PostInvocation": null,
+    "Stop": null,
+    "PreToolUse": null,
+    "PostToolUse": null
+  },
+  "geac-required-gate": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"<redacted-profile>\\.gemini\\config\\hooks\\geac-required-gate.ps1\"",
+        "timeout": 10
+      }
+    ]
+  }
+}

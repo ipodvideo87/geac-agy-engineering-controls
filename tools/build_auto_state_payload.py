@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAYLOAD = ROOT / "payload"
 LEGACY_PLUGIN = ROOT / "reference" / "source" / "legacy-plugin-preview"
 SKILL_NAMES = (
-    "required-gate-action-authorization-and-necessity",
+    "required-gate-required-actions-and-evidence-necessity",
     "required-gate-readiness-and-completion-criteria",
     "required-gate-evidence-source-and-claims",
     "required-gate-historical-evidence-preservation",

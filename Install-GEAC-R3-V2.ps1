@@ -1,5 +1,7 @@
 [CmdletBinding()]
-param()
+param(
+    [switch]$IncludeExperimentalR4Kernel
+)
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -9,6 +11,9 @@ $profileRoot = Join-Path ([Environment]::GetFolderPath('UserProfile')) '.gemini'
 $sourceSkills = Join-Path $packageRoot 'payload\skills'
 $sourceRequiredGate = Join-Path $packageRoot 'reference\source\historical-hooks\geac-required-gate.fg-v1.ps1'
 $sourceClaimAdmission = Join-Path $packageRoot 'reference\source\historical-hooks\geac-x1-r2-claim-admission.ps1'
+$sourceExperimentalR4Kernel = Join-Path $packageRoot 'reference\source\historical-setups\X1-R4\GEMINI.md'
+$expectedExperimentalR4KernelSHA256 = '96231f08f168d877912e2503b4059026dda34e2fb00512c20c096d34cfa50cdf'
+$obsoleteActionSkill = 'antigravity-cli\skills\required-gate-action-authorization-and-necessity\SKILL.md'
 $expectedClaimAdmissionSHA256 = '927f307b30a56a33f88cc7fb23d2651a5047a16155e82ddce728112fe5d70b6d'
 $timestamp = Get-Date -Format 'yyyyMMdd-HHmmss-fff'
 $backupRoot = Join-Path $profileRoot ('geac-backups\GEAC-R3-V2-FGv1\' + $timestamp)
@@ -27,8 +32,23 @@ if ($claimAdmissionSHA256 -ne $expectedClaimAdmissionSHA256) {
 $globalGeminiPath = Join-Path $profileRoot 'GEMINI.md'
 if (Test-Path -LiteralPath $globalGeminiPath -PathType Leaf) {
     $globalGemini = [IO.File]::ReadAllText($globalGeminiPath)
-    if ($globalGemini.Contains('GEAC-2026-08-15-X1-EXPERIMENTAL-BASELINE')) {
-        throw 'The X1 experimental GEMINI.md is not part of this setup. Move it out of the global profile before installing.'
+    $globalGeminiSHA256 = (Get-FileHash -LiteralPath $globalGeminiPath -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($globalGemini.Contains('GEAC-2026-08-15-X1-EXPERIMENTAL-BASELINE') -and
+        $globalGeminiSHA256 -ne $expectedExperimentalR4KernelSHA256) {
+        throw 'An unrecognized X1 experimental GEMINI.md is present. Move it out of the global profile before installing.'
+    }
+}
+if ($IncludeExperimentalR4Kernel) {
+    if (-not (Test-Path -LiteralPath $sourceExperimentalR4Kernel -PathType Leaf)) {
+        throw "Recovered R4 GEMINI.md is missing: $sourceExperimentalR4Kernel"
+    }
+    $sourceKernelSHA256 = (Get-FileHash -LiteralPath $sourceExperimentalR4Kernel -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($sourceKernelSHA256 -ne $expectedExperimentalR4KernelSHA256) {
+        throw "Recovered R4 GEMINI.md hash mismatch: $sourceKernelSHA256"
+    }
+    if ((Test-Path -LiteralPath $globalGeminiPath -PathType Leaf) -and
+        $globalGeminiSHA256 -ne $expectedExperimentalR4KernelSHA256) {
+        throw 'Refusing to replace an existing global GEMINI.md with the experimental R4 kernel.'
     }
 }
 
@@ -56,6 +76,18 @@ foreach ($directory in $skillDirectories) {
     $targets.Add([pscustomobject]@{
         Source = $skillFile
         RelativePath = 'antigravity-cli\skills\' + $directory.Name + '\SKILL.md'
+        RemoveAfterInstall = $false
+    })
+}
+$targets.Add([pscustomobject]@{
+    Source = $null
+    RelativePath = $obsoleteActionSkill
+    RemoveAfterInstall = $true
+})
+if ($IncludeExperimentalR4Kernel) {
+    $targets.Add([pscustomobject]@{
+        Source = $sourceExperimentalR4Kernel
+        RelativePath = 'GEMINI.md'
         RemoveAfterInstall = $false
     })
 }
@@ -193,8 +225,11 @@ try {
 
     & (Join-Path $packageRoot 'Verify-GEAC-R3-V2.ps1')
     Write-Output 'Installed standalone GEAC R3 v2 skills-and-hooks setup.'
+    if ($IncludeExperimentalR4Kernel) {
+        Write-Output 'Installed the recovered X1-R4 GEMINI.md (experimental; not a promotion candidate).'
+    }
     Write-Output "Backup: $backupRoot"
-    Write-Output 'The transcript-recovered R2 claim-admission hook is installed for PreInvocation only.'
+    Write-Output 'The recovered R2 claim-admission hook is installed for PreInvocation only.'
 }
 catch {
     foreach ($entry in @($backupEntries | Sort-Object { $_.RelativePath -eq 'config\hooks.json' })) {

@@ -1,5 +1,5 @@
 {
-  "added_component": "Transcript-recovered FG-v1 forced-skill PreInvocation hook plus the exact X1-R2 claim-admission PreInvocation reminder hook; the latter's recovered 1,317-byte source matches the transcript-recorded SHA-256",
+  "added_component": "Byte-exact recovered FG-v1 forced-skill PreInvocation hook plus the exact X1-R2 claim-admission PreInvocation reminder hook; FG-v1 and R2 both match the former-profile source, and the R2 hook also matches the transcript-recorded 1,317-byte SHA-256",
   "historical_skill_source_contract_id": "GEAC-2026-08-15-X1-EXPERIMENTAL-BASELINE",
   "baseline_zip": "GEAC_X1_EXPERIMENTAL_BASELINE.zip",
   "baseline_zip_sha256": "710e32cbb835fb51293e1d873406f215b646a3a2ea3eb3286ec12ce1c97e9d4c",
@@ -7,16 +7,18 @@
   "historical_active_gemini_md": {
     "bytes": 9544,
     "sha256": "96231f08f168d877912e2503b4059026dda34e2fb00512c20c096d34cfa50cdf",
-    "source": "Full conversation export profile census; exact file body not recovered",
-    "possible_revision_association": "X1-R4 receipt has a matching-minute timestamp; association is not explicit"
+    "source": "Recovered former profile; exact bytes match X1-R4 receipt postSha256",
+    "revision_association": "X1-R4",
+    "status": "EXPERIMENTAL_NOT_A_PROMOTION_CANDIDATE",
+    "packaging": "Exact historical source preserved under reference/source/historical-setups/X1-R4; omitted by default and available through an explicit experimental trial opt-in"
   },
   "r1_identity_sha256": "0dd2355ee3bd513bd6bb155b48f0ba9b7be747ca3d7f1834012ea3354aea2f50",
   "r1_parent_identity_sha256": "f32177a8012cba43ec466bf55cac1608bf1aafd37e433b0a899ce91d63fd67fa",
   "r1_patch_zip": "GEAC_X1_R1_IDENTITY_PATCH.zip",
   "r1_patch_zip_sha256": "5096e5acf5e44cf5b85806e9a0a50356b012720b57d3c91b32010b16a1c866ab",
-  "release_id": "GEAC-AGY-CLI-R3-V2-FG-V1-STANDALONE-2026-10-09",
+  "release_id": "GEAC-AGY-CLI-R3-V2-R4-FG-V1-STANDALONE-2026-10-12",
   "required_next_evidence": "Exact preserved SANITY-001 prompt/raw replay and exact R1 identity/provenance fixture/raw replay; do not reconstruct missing fixtures",
   "revision_id": "GEAC-2026-08-15-X1-R1-IDENTITY-PROVENANCE-BOUNDARY",
-  "skill_metadata_basis": "Latest recovered R3 v2 labels and descriptions applied to the eight skills; descriptions safely quoted as YAML strings",
+  "skill_metadata_basis": "R3 v2 supplies latest recovered discovery descriptions; later X1-R4 normalized the eight required-gate identifiers. The current package uses the R3 v2 descriptions with the R4 shared prefix, safely quoted as YAML strings",
   "status": "EXPERIMENTAL_RECONSTRUCTION_NOT_PROMOTED"
 }

@@ -34,7 +34,7 @@ def files_under(root: Path) -> list[Path]:
 def main() -> None:
     all_files = [p for p in files_under(ROOT) if p not in ROOT_EXCLUDED]
     manifest = {
-        "release_id": "GEAC-AGY-CLI-R3-V2-FG-V1-STANDALONE-2026-10-09",
+        "release_id": "GEAC-AGY-CLI-R3-V2-R4-FG-V1-STANDALONE-2026-10-12",
         "status": "EXPERIMENTAL_RECONSTRUCTION_NOT_PROMOTED",
         "files": [
             {"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size, "sha256": sha256(p)}

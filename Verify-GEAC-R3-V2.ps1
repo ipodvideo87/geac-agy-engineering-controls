@@ -9,6 +9,8 @@ $profileRoot = Join-Path ([Environment]::GetFolderPath('UserProfile')) '.gemini'
 $sourceSkills = Join-Path $packageRoot 'payload\skills'
 $sourceRequiredGate = Join-Path $packageRoot 'reference\source\historical-hooks\geac-required-gate.fg-v1.ps1'
 $sourceClaimAdmission = Join-Path $packageRoot 'reference\source\historical-hooks\geac-x1-r2-claim-admission.ps1'
+$sourceExperimentalR4Kernel = Join-Path $packageRoot 'reference\source\historical-setups\X1-R4\GEMINI.md'
+$expectedExperimentalR4KernelSHA256 = '96231f08f168d877912e2503b4059026dda34e2fb00512c20c096d34cfa50cdf'
 $expectedClaimAdmissionSHA256 = '927f307b30a56a33f88cc7fb23d2651a5047a16155e82ddce728112fe5d70b6d'
 
 function Assert-SameFile {
@@ -25,8 +27,13 @@ function Assert-SameFile {
 $globalGeminiPath = Join-Path $profileRoot 'GEMINI.md'
 if (Test-Path -LiteralPath $globalGeminiPath -PathType Leaf) {
     $globalGemini = [IO.File]::ReadAllText($globalGeminiPath)
-    if ($globalGemini.Contains('GEAC-2026-08-15-X1-EXPERIMENTAL-BASELINE')) {
-        throw 'The X1 experimental GEMINI.md must not be active with this setup.'
+    $globalGeminiSHA256 = (Get-FileHash -LiteralPath $globalGeminiPath -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($globalGemini.Contains('GEAC-2026-08-15-X1-EXPERIMENTAL-BASELINE') -and
+        $globalGeminiSHA256 -ne $expectedExperimentalR4KernelSHA256) {
+        throw 'An unrecognized X1 experimental GEMINI.md is active with this setup.'
+    }
+    if ($globalGeminiSHA256 -eq $expectedExperimentalR4KernelSHA256) {
+        Assert-SameFile -Source $sourceExperimentalR4Kernel -Target $globalGeminiPath
     }
 }
 
@@ -35,6 +42,10 @@ if ($skillDirectories.Count -ne 8) { throw "Expected eight package skills; found
 foreach ($directory in $skillDirectories) {
     if ($directory.Name -notlike 'required-gate-*') { throw "Invalid required-gate skill name: $($directory.Name)" }
     Assert-SameFile -Source (Join-Path $directory.FullName 'SKILL.md') -Target (Join-Path $profileRoot ('antigravity-cli\skills\' + $directory.Name + '\SKILL.md'))
+}
+$obsoleteActionSkillTarget = Join-Path $profileRoot 'antigravity-cli\skills\required-gate-action-authorization-and-necessity\SKILL.md'
+if (Test-Path -LiteralPath $obsoleteActionSkillTarget -PathType Leaf) {
+    throw 'The superseded pre-R4 action-skill name remains installed.'
 }
 
 $requiredGateTarget = Join-Path $profileRoot 'config\hooks\geac-required-gate.ps1'

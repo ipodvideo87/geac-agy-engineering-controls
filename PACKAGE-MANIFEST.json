@@ -1,5 +1,5 @@
 {
-  "release_id": "GEAC-AGY-CLI-R3-V2-FG-V1-STANDALONE-2026-10-09",
+  "release_id": "GEAC-AGY-CLI-R3-V2-R4-FG-V1-STANDALONE-2026-10-12",
   "status": "EXPERIMENTAL_RECONSTRUCTION_NOT_PROMOTED",
   "files": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "path": "Install-GEAC-R3-V2.ps1",
-      "bytes": 9670,
-      "sha256": "440a50d250a7742d8682f2a68224a5743d12467932adb8e5c386e70c939a2fb8"
+      "bytes": 11404,
+      "sha256": "744fad7634dcadb9f9f1c4ba7d82cfa58b7648f8ea8d28f7e12e0aaafd3603cf"
     },
     {
       "path": "LICENSE",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7399,
-      "sha256": "02851f1c466be389293a9219813e8374f40b41231d7c605bd1f3093c85e4948d"
+      "bytes": 8696,
+      "sha256": "dcd3c622861d94ea40e0bf49338126a60f30d063c104c9b51c57c67fcc10b413"
     },
     {
       "path": "Restore-GEAC-R3-V2.ps1",
@@ -34,18 +34,18 @@
     },
     {
       "path": "SOURCE-BASIS.json",
-      "bytes": 1824,
-      "sha256": "c23078d956e3cdf3d0cc00ccf698a393ef68dab7fe8c921a66caf7f7a8e3f3f7"
+      "bytes": 2128,
+      "sha256": "b8be83fac3c464badba15d9d84db7dd7eed1c279c4e1ccdb6e59533c66e66a23"
     },
     {
       "path": "SOURCE-PAYLOAD-SHA256.txt",
-      "bytes": 1031,
-      "sha256": "6b162168438e001304265ea9642e214b02fb216b567d4b66bffcde229930f79a"
+      "bytes": 1036,
+      "sha256": "829be575216a0b1c448f639ff3190cb145d6d4187aa5d1a2a1d29362c46d7579"
     },
     {
       "path": "Verify-GEAC-R3-V2.ps1",
-      "bytes": 6484,
-      "sha256": "19d0da4c80e8113ac536157cd593ff65db0ce0ea7dfcdfaa85941e6e2d1e4c17"
+      "bytes": 7328,
+      "sha256": "e802c520db4c54223967f608cadb4bb1fa12c600162c3c75db8db2f140a480e4"
     },
     {
       "path": "docs/ARCHITECTURE-IDEAS.md",
@@ -54,18 +54,18 @@
     },
     {
       "path": "docs/RATIONALE.md",
-      "bytes": 3750,
-      "sha256": "3fe73ed56839b60cd1178461ef059381111a1282232e13c7877c069db93617db"
+      "bytes": 3830,
+      "sha256": "76a9cc9598bc5689690ae8a6b3ec88888b840198c7323869eaa5ea2eddca6372"
     },
     {
       "path": "docs/SOURCE-RECOVERY.md",
-      "bytes": 14892,
-      "sha256": "0dc0cb30b1df65c9bb296123597274164dce8c99ae3db62da89b9918d48ed9c2"
+      "bytes": 16774,
+      "sha256": "157eaac33c1f33efb9437bbaf16a5e1add6212f98a69c2cdbead8a4d155d198d"
     },
     {
-      "path": "payload/skills/required-gate-action-authorization-and-necessity/SKILL.md",
-      "bytes": 2899,
-      "sha256": "2b2ec915aacae0c30ddeaeabe9905ffaeb026b62376f7bb3f4209f9259245d2f"
+      "path": "docs/TRIAL-2026-10-12.md",
+      "bytes": 2612,
+      "sha256": "9e68e1db688116eb1a45018341eadf592747e9310f1877969d5b722ffbb696a5"
     },
     {
       "path": "payload/skills/required-gate-artifact-identity-and-provenance/SKILL.md",
@@ -96,6 +96,11 @@
       "path": "payload/skills/required-gate-readiness-and-completion-criteria/SKILL.md",
       "bytes": 2561,
       "sha256": "5d9ab0e3fb36302a2ea160ea37dc11557ffd626f08cb8d9624c0cf70bf5749af"
+    },
+    {
+      "path": "payload/skills/required-gate-required-actions-and-evidence-necessity/SKILL.md",
+      "bytes": 2852,
+      "sha256": "b54f61b0cb9269a9220e50269c457474d39c5591cc154584763569e9487b4164"
     },
     {
       "path": "payload/skills/required-gate-test-scan-results-and-verification/SKILL.md",
@@ -139,13 +144,13 @@
     },
     {
       "path": "reference/source/historical-hooks/README.md",
-      "bytes": 2857,
-      "sha256": "c26e0038fb59477112387e97bffdf38a765de3fd05c3c4bf3b0929e20b299b84"
+      "bytes": 3777,
+      "sha256": "fb3dd3c94b0d2e6af726815c93adc9dc27e6f6bcfed439b0ee1a24c5e3651498"
     },
     {
       "path": "reference/source/historical-hooks/geac-required-gate.fg-v1.ps1",
-      "bytes": 6735,
-      "sha256": "05dcde5081d12ec532c3b21b12e25ddf824beee43e5a5e572d65212bd860b6d3"
+      "bytes": 6737,
+      "sha256": "d9aec018798b0b2eeb04f13bd738327839afb643900e9e294a57fe1d03ad2f2d"
     },
     {
       "path": "reference/source/historical-hooks/geac-x1-r2-claim-admission.ps1",
@@ -156,6 +161,71 @@
       "path": "reference/source/historical-notes/GEMINI_D2_SEMANTIC_HARDENING_E1.md",
       "bytes": 17122,
       "sha256": "5d551206fca7efe328a13617c5c04ea4ab8eb2d9863bbb5f4a7b7eceaa543ef8"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/20260816_225304_646-receipt.redacted.json",
+      "bytes": 8044,
+      "sha256": "081c342a57fb3578b0b51bd99530073edfb03ffb587751530ed0d32a13ffa4e6"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/GEMINI.md",
+      "bytes": 9544,
+      "sha256": "96231f08f168d877912e2503b4059026dda34e2fb00512c20c096d34cfa50cdf"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/README.md",
+      "bytes": 2168,
+      "sha256": "0dcd65d7a962e3f6bd1ff34202d6edecfecb4f8b82729bf2acd4917c93478068"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/hooks.redacted.json",
+      "bytes": 735,
+      "sha256": "55d293402ee09c15607818c6535e1125391e29df4481cf08c8e13200699c1835"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/hooks/geac-required-gate.r4-protocol-hook.ps1",
+      "bytes": 2055,
+      "sha256": "1965d3be9814ad3e0e2c1ea204e946b6e55a814fd4f9d702e1a2827d5939bdab"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-artifact-identity-and-provenance/SKILL.md",
+      "bytes": 3116,
+      "sha256": "085afde30f1f01e7df5742602576c27cd3f13fcaeb10996f7b12270c8d223873"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-claim-inference-and-strengthening/SKILL.md",
+      "bytes": 2274,
+      "sha256": "ea8b8f59365a1d758dde7057215d1bb4713e2dbf40059a28b2308afdaf591f32"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-claim-output-validation/SKILL.md",
+      "bytes": 2638,
+      "sha256": "a6043b17fa8814d2250d2351bdeccac888611eab536a9349900a4e5dfbc7b1b8"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-evidence-source-and-claims/SKILL.md",
+      "bytes": 2647,
+      "sha256": "4abb5c695228f00e6253455976dea0834ed03a57df46fc4dc21e01d8800b2f74"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-historical-evidence-preservation/SKILL.md",
+      "bytes": 2416,
+      "sha256": "61f7b2d4e93cf7f06d149406ff3a8bd98a4c2b538b30ec4325e66720c011a906"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-readiness-and-completion-criteria/SKILL.md",
+      "bytes": 2510,
+      "sha256": "b78939260883a86f1cd896842fb4772d11b3b588e7b6c4138bd432747b8561e5"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-required-actions-and-evidence-necessity/SKILL.md",
+      "bytes": 2852,
+      "sha256": "b54f61b0cb9269a9220e50269c457474d39c5591cc154584763569e9487b4164"
+    },
+    {
+      "path": "reference/source/historical-setups/X1-R4/skills/required-gate-test-scan-results-and-verification/SKILL.md",
+      "bytes": 2989,
+      "sha256": "4de1816b7a7e4bc1cbc8667f01c0091f8c8065be28a6b09f6d5c8db4e52649ce"
     },
     {
       "path": "reference/source/kernel-candidates/GEAC-V1-FROZEN/GEMINI.md",
@@ -199,8 +269,8 @@
     },
     {
       "path": "reference/source/kernel-candidates/README.md",
-      "bytes": 2350,
-      "sha256": "6dfb83c0b43ed97fb09cbafd278c1c7f396fc2a128221224856f0c8e0f731824"
+      "bytes": 2677,
+      "sha256": "4092231b222fc8002e25fbb6eff38f866f34a4c55d7f8ccf1364ce8083e68bd1"
     },
     {
       "path": "reference/source/legacy-plugin-preview/GEMINI.md",
@@ -469,13 +539,13 @@
     },
     {
       "path": "tools/build_auto_state_payload.py",
-      "bytes": 2228,
-      "sha256": "a658f0a5587f366b5962587438dc949f5508c5ccb9783415b13e87c3a481250b"
+      "bytes": 2233,
+      "sha256": "f1d54882a5fc596aec17b979b30562460e0095ac07ca0996e5a629a9065870fe"
     },
     {
       "path": "tools/build_package_manifests.py",
-      "bytes": 2303,
-      "sha256": "5ab85874e7c8e486a09d4aa21d299728c9532126a22f32a5615811d28b427b6b"
+      "bytes": 2306,
+      "sha256": "48bcc7a364b521b5ad28b8d2e4812c967fd68ac7c5fd97ebca5363a973fa5aed"
     }
   ]
 }

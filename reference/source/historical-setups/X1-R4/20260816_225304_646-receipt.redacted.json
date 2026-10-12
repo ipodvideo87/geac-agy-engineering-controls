@@ -1,0 +1,151 @@
+{
+  "revision": "X1-R4",
+  "script": "R4-v3",
+  "timestamp": "20260816_225304_646",
+  "status": "APPLIED_LOCAL_VALIDATION_PASSED_RUNTIME_DISCOVERY_NOT_TESTED",
+  "observedPreR4Asymmetry": {
+    "folder": "required-actions-and-evidence-necessity",
+    "frontmatterName": "action-authorization-and-necessity",
+    "preservedInBackup": true
+  },
+  "experiment": {
+    "change": "Normalize all eight GEAC gates to required-gate-* identifiers and add a separate mandatory-if-applicable PreInvocation protocol hook.",
+    "semanticSkillBodiesChanged": false,
+    "descriptionsChanged": false,
+    "existingR2HookChanged": false,
+    "runtimeSkillsListingTested": false,
+    "runtimeHooksListingTested": false,
+    "automaticActivationTested": false,
+    "behavioralComplianceTested": false
+  },
+  "backup": {
+    "directory": "<redacted-profile>/.gemini/geac-backups/X1-R4/20260816_225304_646",
+    "zip": "<redacted-profile>/.gemini/geac-backups/X1-R4/20260816_225304_646.zip",
+    "zipSha256": "b2719db671825b48672dd080459236f2ef5037c4cc30b8f2701f01aee4133efa"
+  },
+  "geminiMd": {
+    "preSha256": "8444f32c3ea475ee83aa7c0bf2b7939230d393e9df4ff915f9bfb27447e3e457",
+    "postSha256": "96231f08f168d877912e2503b4059026dda34e2fb00512c20c096d34cfa50cdf"
+  },
+  "hooksJson": {
+    "preSha256": "8f6067bfe876266a0284e729b12b0eeec83149971aa08066861f0518e9be747d",
+    "postSha256": "460fbea1b1d5d131dff3beb253a9819575758c3860e5f8e08167681260dde1a7"
+  },
+  "r2Hook": {
+    "path": "<redacted-profile>/.gemini/config/hooks/geac-x1-r2-claim-admission.ps1",
+    "preSha256": "927f307b30a56a33f88cc7fb23d2651a5047a16155e82ddce728112fe5d70b6d",
+    "postSha256": "927f307b30a56a33f88cc7fb23d2651a5047a16155e82ddce728112fe5d70b6d"
+  },
+  "r4Hook": {
+    "name": "geac-required-gate",
+    "path": "<redacted-profile>/.gemini/config/hooks/geac-required-gate.ps1",
+    "sha256": "1965d3be9814ad3e0e2c1ea204e946b6e55a814fd4f9d702e1a2827d5939bdab",
+    "event": "PreInvocation",
+    "outputType": "ephemeralMessage",
+    "selfTest": "PASS"
+  },
+  "skills": [
+    {
+      "sourceFolder": "artifact-identity-and-provenance",
+      "sourceFrontmatterName": "artifact-identity-and-provenance",
+      "resolvedGeminiReference": "artifact-identity-and-provenance",
+      "targetName": "required-gate-artifact-identity-and-provenance",
+      "preFileSha256": "6d189add8bdd8c75206d416699c6a8389683324c7a824ae68b2509414f83986f",
+      "postFileSha256": "085afde30f1f01e7df5742602576c27cd3f13fcaeb10996f7b12270c8d223873",
+      "preBodySha256": "e528c89cd414f4cc283fba4d3d7343b93cfed10d014759373e6ef2c1c4e4db39",
+      "postBodySha256": "e528c89cd414f4cc283fba4d3d7343b93cfed10d014759373e6ef2c1c4e4db39",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "evidence-source-and-claims",
+      "sourceFrontmatterName": "evidence-source-and-claims",
+      "resolvedGeminiReference": "evidence-source-and-claims",
+      "targetName": "required-gate-evidence-source-and-claims",
+      "preFileSha256": "46fbfa0c0bc55fc0a003ff2f995aa3a70b75f512764d964dab20b96eab7c9e09",
+      "postFileSha256": "4abb5c695228f00e6253455976dea0834ed03a57df46fc4dc21e01d8800b2f74",
+      "preBodySha256": "195b0597961e2745eeb537555075c4c08ddce63ec762e2defd4718ec670f9dca",
+      "postBodySha256": "195b0597961e2745eeb537555075c4c08ddce63ec762e2defd4718ec670f9dca",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "claim-inference-and-strengthening",
+      "sourceFrontmatterName": "claim-inference-and-strengthening",
+      "resolvedGeminiReference": "claim-inference-and-strengthening",
+      "targetName": "required-gate-claim-inference-and-strengthening",
+      "preFileSha256": "8137aa30bf13f845fa13dbc974000cc8394515bed29716e28766fc7e5e85d5f1",
+      "postFileSha256": "ea8b8f59365a1d758dde7057215d1bb4713e2dbf40059a28b2308afdaf591f32",
+      "preBodySha256": "7319272ac2db0d13bd091c8fa42d91d344beb21b64c5996f9c16f12f902d13f7",
+      "postBodySha256": "7319272ac2db0d13bd091c8fa42d91d344beb21b64c5996f9c16f12f902d13f7",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "test-scan-results-and-verification",
+      "sourceFrontmatterName": "test-scan-results-and-verification",
+      "resolvedGeminiReference": "test-scan-results-and-verification",
+      "targetName": "required-gate-test-scan-results-and-verification",
+      "preFileSha256": "63aebd824f6eeae6fcf392bc103b65a699540c914f922dac963a4ddf8cecd58a",
+      "postFileSha256": "4de1816b7a7e4bc1cbc8667f01c0091f8c8065be28a6b09f6d5c8db4e52649ce",
+      "preBodySha256": "501a17591e5720074f1b181e54dbd9a5d16e415a4a7acb050e0c55d569eb2b70",
+      "postBodySha256": "501a17591e5720074f1b181e54dbd9a5d16e415a4a7acb050e0c55d569eb2b70",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "readiness-and-completion-criteria",
+      "sourceFrontmatterName": "readiness-and-completion-criteria",
+      "resolvedGeminiReference": "readiness-and-completion-criteria",
+      "targetName": "required-gate-readiness-and-completion-criteria",
+      "preFileSha256": "2fb1534ab5e010689cf1cfad4bb01066bf1cf52d55919f10a8e82e7f1b37300b",
+      "postFileSha256": "b78939260883a86f1cd896842fb4772d11b3b588e7b6c4138bd432747b8561e5",
+      "preBodySha256": "7d3a1a9f5d0ae744de652d235bfc909fd1dd78e8a45de01016668728f378d957",
+      "postBodySha256": "7d3a1a9f5d0ae744de652d235bfc909fd1dd78e8a45de01016668728f378d957",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "historical-evidence-preservation",
+      "sourceFrontmatterName": "historical-evidence-preservation",
+      "resolvedGeminiReference": "historical-evidence-preservation",
+      "targetName": "required-gate-historical-evidence-preservation",
+      "preFileSha256": "c1181219b271fb32b69f7f4f2a8f4176533a44f9d8c320133ca0b222538d5853",
+      "postFileSha256": "61f7b2d4e93cf7f06d149406ff3a8bd98a4c2b538b30ec4325e66720c011a906",
+      "preBodySha256": "01bbedad677425c8f0be52f2a03c14db39c9bf6ee0fdc5e5688cb0e466dad48a",
+      "postBodySha256": "01bbedad677425c8f0be52f2a03c14db39c9bf6ee0fdc5e5688cb0e466dad48a",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "required-actions-and-evidence-necessity",
+      "sourceFrontmatterName": "action-authorization-and-necessity",
+      "resolvedGeminiReference": "action-authorization-and-necessity",
+      "targetName": "required-gate-required-actions-and-evidence-necessity",
+      "preFileSha256": "9c5d8013b63e5e7ad63529a95fa0a21cf896305a702aa01e531060a5e0bd4a83",
+      "postFileSha256": "b54f61b0cb9269a9220e50269c457474d39c5591cc154584763569e9487b4164",
+      "preBodySha256": "59fce3b8a6e9b581867e8c0d2cb776229e04ec2c21ee044fe9d81f8bce23c86e",
+      "postBodySha256": "59fce3b8a6e9b581867e8c0d2cb776229e04ec2c21ee044fe9d81f8bce23c86e",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    },
+    {
+      "sourceFolder": "claim-output-validation",
+      "sourceFrontmatterName": "claim-output-validation",
+      "resolvedGeminiReference": "claim-output-validation",
+      "targetName": "required-gate-claim-output-validation",
+      "preFileSha256": "1f05995aa1b142496ff460d24af3a8707423255a2c58752a6e50cf7699312e74",
+      "postFileSha256": "a6043b17fa8814d2250d2351bdeccac888611eab536a9349900a4e5dfbc7b1b8",
+      "preBodySha256": "62d217b38112275181cc5ceb7de50a9c37e2751ed82186223fd56f3fd3eaaa24",
+      "postBodySha256": "62d217b38112275181cc5ceb7de50a9c37e2751ed82186223fd56f3fd3eaaa24",
+      "descriptionUnchanged": true,
+      "semanticBodyUnchanged": true
+    }
+  ],
+  "nextValidation": {
+    "freshAgyProcess": "REQUIRED",
+    "slashSkills": "NOT_TESTED",
+    "slashHooks": "NOT_TESTED",
+    "behavior": "NOT_TESTED"
+  }
+}
